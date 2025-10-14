@@ -4,6 +4,9 @@ public class Pruebas_String {
     static void main() {
 
         String frase = "Al palo JuanFran del Atleti palo";
+        int numero = 456;
+
+        String numero_string = Integer.toString(numero); //pasar un numero entero a String
 
         int tamanyo = frase.length();       //para saber el tamaño de un string. tamanyo es la lenght de frase
         System.out.println(tamanyo);        //te dice cuantos caracteres tiene frase
