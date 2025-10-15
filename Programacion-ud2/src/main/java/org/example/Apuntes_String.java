@@ -52,6 +52,11 @@ public class Apuntes_String {
         String equipo = "Real Madrid";
         System.out.println(frase.concat(equipo));
 
+        boolean contiene = frase.contains("palo");  //¿esta la palabra en el texto? si está da true, si no está da false.
+        System.out.println(contiene);
+
+        int unidades_int = Integer.parseInt(frase); //pasar a numeros enteros un String. Si no funciona es porque no hay numeros en esa frase, o en ese trozo de frase.
+
 
 
     }
