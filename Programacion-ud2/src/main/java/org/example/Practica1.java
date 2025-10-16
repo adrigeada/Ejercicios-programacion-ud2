@@ -28,11 +28,7 @@ public class Practica1 {
             System.out.println(barratest2);
             System.out.println(barratest1);
             int diaint = 0;
-<<<<<<< HEAD
-            int mesint = 0;
-=======
-            int mesint = 0; //inicializar las varables para poder usarlas fuera del trycatch
->>>>>>> 11c4bab7c1c65c645faa924b8c5b0adb5103afeb
+            int mesint = 0;     //inicializar las varables para poder usarlas fuera del trycatch
             int anyoint = 0;
 
 
@@ -41,28 +37,20 @@ public class Practica1 {
                 //si en el espacio donde deben ir las barras no hay una barra salta este mensaje
             }else{
                 try{
-<<<<<<< HEAD
-                    diaint = Integer.parseInt(dia);
-                    mesint = Integer.parseInt(mes);
-                    anyoint = Integer.parseInt(anyo);       //las paso a numero entero, si lo que hay en esa posicion no son numeros salta error, el try catch controla ese error
-                }catch (Exception e){                       //el try catch controla el fallo de java y lo atrapa para poder poner un mensaje en vez de el fallo con letras rojas
-                    System.out.println("letras en el dia");
-                }
-                System.out.println(diaint);
-                if (diaint <= 0 || diaint > 31){
-
-=======
                     //paso los huecos de dia, mes y anyo a int, si en ese hueco no hubiera un numero saltaria error de java con letras rojas.
                     //Por eso este paso de string a int está en un try catch, para que capture ese fallo de java.
                     diaint = Integer.parseInt(dia);
                     mesint = Integer.parseInt(mes);
                     anyoint = Integer.parseInt(anyo);
-                    //Si el try catch no salta es porque, efectivamente, hay numeros enteros en esos huecos
                 }catch (Exception e){
-                    System.out.println("El formato dd/mm/aaaa está mal introducido");
->>>>>>> 11c4bab7c1c65c645faa924b8c5b0adb5103afeb
+                    System.out.println("letras en el dia");
                 }
-                //ahora pruebo que los dias, meses y anyos introducidos son correctos.
+                    diaint = Integer.parseInt(dia);
+                    mesint = Integer.parseInt(mes);
+                    anyoint = Integer.parseInt(anyo);
+                    //Si el try catch no salta es porque, efectivamente, hay numeros enteros en esos huecos
+                    //ahora pruebo que los dias, meses y anyos introducidos son correctos.
+
                 if (diaint <= 0 || diaint > 31){
                     System.out.println("Los días no pueden ser negativos o mayores que 31");
                 } else if (mesint <= 0 || mesint > 12) {
@@ -72,8 +60,8 @@ public class Practica1 {
                 }else {
 
                     //una vez comprobado que los datos introducidos entran dentro de nuestros parámetros podemos calcular el resultado
-                    int resultado = diaint+mesint+anyoint;
-                    System.out.println(diaint+"+"+mesint+"+"+anyoint+"="+resultado);
+                    int resultado = diaint + mesint + anyoint;
+                    System.out.println(diaint + "+" + mesint + "+" + anyoint + "=" + resultado);
 
                     //transformar int resultado en string para poder separar los numeros y poder sumarlos por separado
 
@@ -81,9 +69,9 @@ public class Practica1 {
 
                     //Separar los caracteres de resultado un diferentes Strings para luego transformarlos en numeros int
 
-                    String millares = resultado_string.substring(0,1);
-                    String centenas = resultado_string.substring(1,2);
-                    String decenas = resultado_string.substring(2,3);
+                    String millares = resultado_string.substring(0, 1);
+                    String centenas = resultado_string.substring(1, 2);
+                    String decenas = resultado_string.substring(2, 3);
                     String unidades = resultado_string.substring(3);
 
                     //Transformar los string creados en numeros enteros para poder sumarlos
@@ -93,38 +81,16 @@ public class Practica1 {
                     int decenasint = Integer.parseInt(decenas);
                     int unidadesint = Integer.parseInt(unidades);
 
-                    int resultadofinal = millaresint+centenasint+decenasint+unidadesint;
+                    int resultadofinal = millaresint + centenasint + decenasint + unidadesint;
 
-                    System.out.println(millares+"+"+centenas+"+"+decenas+"+"+unidades+"="+resultadofinal);
+                    System.out.println(millares + "+" + centenas + "+" + decenas + "+" + unidades + "=" + resultadofinal);
 
 
-<<<<<<< HEAD
-
-=======
                 }
->>>>>>> 11c4bab7c1c65c645faa924b8c5b0adb5103afeb
-
 
             }
 
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     }
