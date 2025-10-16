@@ -11,7 +11,7 @@ public class Practica1 {
 
         int longitud = fechanacimiento.length();
         if (longitud != 10){
-            System.out.println("El formato no es 10");
+            System.out.println("La fecha introducida tiene que tener 10 carácteres");
         }else {
             String dia = fechanacimiento.substring(0,2);  //Localizo las posiciones de dia mes y año
             String mes = fechanacimiento.substring(3,5);
@@ -19,18 +19,18 @@ public class Practica1 {
             String barra1 = fechanacimiento.substring(2,3);
             String barra2 = fechanacimiento.substring(5,6);
 
-            boolean barratest = barra1.equals("/"); //¿barra 1 es /?
+            boolean barratest1 = barra1.equals("/"); //¿en el espacio de barra1 es /?
             boolean barratest2 = barra2.equals("/");
             System.out.println(barratest2);
-            System.out.println(barratest);
+            System.out.println(barratest1);
 
 
-            if (barratest == false || barratest2 == false){
+            if (barratest1 == false || barratest2 == false){
                 System.out.println("El formato está mal");
             }else{
                 try{
-                    int diaint = Integer.parseInt(dia);     //las paso a numero entero, y compruebo con el try catch que es un numero
-                }catch (Exception e){
+                    int diaint = Integer.parseInt(dia);     //las paso a numero entero, si lo que hay en esa posicion no son numeros salta error, el try catch controla ese error
+                }catch (Exception e){                       //el try catch controla el fallo de java y lo atrapa para poder poner un mensaje en vez de el fallo con letras rojas
                     System.out.println("letras en el dia");
                 }
 
@@ -45,6 +45,9 @@ public class Practica1 {
                 }catch (Exception e){
                     System.out.println("letras en el año");
                 }
+
+
+
             }
 
         }
