@@ -9,29 +9,39 @@ public class Practica1 {
         System.out.println("Introduce tu fecha de nacimiento (dd/mm/aaaa): ");
         String fechanacimiento = teclado.nextLine();
 
+        //Tras guardar lo introducido en teclado como un String, lo medimos para controlar que el formato de la fecha introducida sea correcto
+        //Si lo introducido por teclado tiene una longitud distinta a 10 es porque está mal.
         int longitud = fechanacimiento.length();
         if (longitud != 10){
-            System.out.println("La fecha introducida tiene que tener 10 carácteres");
+            System.out.println("La fecha introducida tiene que tener 10 carácteres contando las barras");
         }else {
-            String dia = fechanacimiento.substring(0,2);  //Localizo las posiciones de dia mes y año
+            //Localizo las posiciones de dia mes y año y las barras
+
+            String dia = fechanacimiento.substring(0,2);
             String mes = fechanacimiento.substring(3,5);
             String anyo = fechanacimiento.substring(6,10);
             String barra1 = fechanacimiento.substring(2,3);
             String barra2 = fechanacimiento.substring(5,6);
 
-            boolean barratest1 = barra1.equals("/"); //¿en el espacio de barra1 es /?
+            boolean barratest1 = barra1.equals("/"); //¿en el espacio de barra1 hay /?
             boolean barratest2 = barra2.equals("/");
             System.out.println(barratest2);
             System.out.println(barratest1);
             int diaint = 0;
+<<<<<<< HEAD
             int mesint = 0;
+=======
+            int mesint = 0; //inicializar las varables para poder usarlas fuera del trycatch
+>>>>>>> 11c4bab7c1c65c645faa924b8c5b0adb5103afeb
             int anyoint = 0;
 
 
             if (barratest1 == false || barratest2 == false){
-                System.out.println("El formato está mal");
+                System.out.println("Recuerda usar barras para separar los datos introducidos");
+                //si en el espacio donde deben ir las barras no hay una barra salta este mensaje
             }else{
                 try{
+<<<<<<< HEAD
                     diaint = Integer.parseInt(dia);
                     mesint = Integer.parseInt(mes);
                     anyoint = Integer.parseInt(anyo);       //las paso a numero entero, si lo que hay en esa posicion no son numeros salta error, el try catch controla ese error
@@ -41,10 +51,58 @@ public class Practica1 {
                 System.out.println(diaint);
                 if (diaint <= 0 || diaint > 31){
 
+=======
+                    //paso los huecos de dia, mes y anyo a int, si en ese hueco no hubiera un numero saltaria error de java con letras rojas.
+                    //Por eso este paso de string a int está en un try catch, para que capture ese fallo de java.
+                    diaint = Integer.parseInt(dia);
+                    mesint = Integer.parseInt(mes);
+                    anyoint = Integer.parseInt(anyo);
+                    //Si el try catch no salta es porque, efectivamente, hay numeros enteros en esos huecos
+                }catch (Exception e){
+                    System.out.println("El formato dd/mm/aaaa está mal introducido");
+>>>>>>> 11c4bab7c1c65c645faa924b8c5b0adb5103afeb
                 }
+                //ahora pruebo que los dias, meses y anyos introducidos son correctos.
+                if (diaint <= 0 || diaint > 31){
+                    System.out.println("Los días no pueden ser negativos o mayores que 31");
+                } else if (mesint <= 0 || mesint > 12) {
+                    System.out.println("Los meses no pueden ser negativos o mayores que 12");
+                } else if (anyoint <= 1900 || anyoint > 2025) {
+                    System.out.println("Año introducido incorrecto");
+                }else {
+
+                    //una vez comprobado que los datos introducidos entran dentro de nuestros parámetros podemos calcular el resultado
+                    int resultado = diaint+mesint+anyoint;
+                    System.out.println(diaint+"+"+mesint+"+"+anyoint+"="+resultado);
+
+                    //transformar int resultado en string para poder separar los numeros y poder sumarlos por separado
+
+                    String resultado_string = Integer.toString(resultado);
+
+                    //Separar los caracteres de resultado un diferentes Strings para luego transformarlos en numeros int
+
+                    String millares = resultado_string.substring(0,1);
+                    String centenas = resultado_string.substring(1,2);
+                    String decenas = resultado_string.substring(2,3);
+                    String unidades = resultado_string.substring(3);
+
+                    //Transformar los string creados en numeros enteros para poder sumarlos
+
+                    int millaresint = Integer.parseInt(millares);
+                    int centenasint = Integer.parseInt(centenas);
+                    int decenasint = Integer.parseInt(decenas);
+                    int unidadesint = Integer.parseInt(unidades);
+
+                    int resultadofinal = millaresint+centenasint+decenasint+unidadesint;
+
+                    System.out.println(millares+"+"+centenas+"+"+decenas+"+"+unidades+"="+resultadofinal);
 
 
+<<<<<<< HEAD
 
+=======
+                }
+>>>>>>> 11c4bab7c1c65c645faa924b8c5b0adb5103afeb
 
 
             }
