@@ -25,8 +25,6 @@ public class Practica1 {
 
             boolean barratest1 = barra1.equals("/"); //¿en el espacio de barra1 hay /?
             boolean barratest2 = barra2.equals("/");
-            System.out.println(barratest2);
-            System.out.println(barratest1);
             int diaint = 0;
             int mesint = 0;     //inicializar las varables para poder usarlas fuera del trycatch
             int anyoint = 0;
@@ -43,13 +41,11 @@ public class Practica1 {
                     mesint = Integer.parseInt(mes);
                     anyoint = Integer.parseInt(anyo);
                 }catch (Exception e){
-                    System.out.println("letras en el dia");
+                    System.out.println("Formato dd/mm/aaaa introducido incorrecto");
                 }
-                    diaint = Integer.parseInt(dia);
-                    mesint = Integer.parseInt(mes);
-                    anyoint = Integer.parseInt(anyo);
+
                     //Si el try catch no salta es porque, efectivamente, hay numeros enteros en esos huecos
-                    //ahora pruebo que los dias, meses y anyos introducidos son correctos.
+                    //Ahora pruebo que los dias, meses y anyos introducidos son correctos.
 
                 if (diaint <= 0 || diaint > 31){
                     System.out.println("Los días no pueden ser negativos o mayores que 31");
@@ -60,10 +56,11 @@ public class Practica1 {
                 }else {
 
                     //una vez comprobado que los datos introducidos entran dentro de nuestros parámetros podemos calcular el resultado
+
                     int resultado = diaint + mesint + anyoint;
                     System.out.println(diaint + "+" + mesint + "+" + anyoint + "=" + resultado);
 
-                    //transformar int resultado en string para poder separar los numeros y poder sumarlos por separado
+                    //Transformo el int resultado en string para poder separar los numeros y poder sumarlos por separado
 
                     String resultado_string = Integer.toString(resultado);
 
@@ -84,6 +81,7 @@ public class Practica1 {
                     int resultadofinal = millaresint + centenasint + decenasint + unidadesint;
 
                     System.out.println(millares + "+" + centenas + "+" + decenas + "+" + unidades + "=" + resultadofinal);
+                    System.out.println("Tu número de la suerte es: "+resultadofinal);
 
 
                 }
