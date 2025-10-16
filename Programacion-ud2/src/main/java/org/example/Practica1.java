@@ -23,28 +23,27 @@ public class Practica1 {
             boolean barratest2 = barra2.equals("/");
             System.out.println(barratest2);
             System.out.println(barratest1);
+            int diaint = 0;
+            int mesint = 0;
+            int anyoint = 0;
 
 
             if (barratest1 == false || barratest2 == false){
                 System.out.println("El formato está mal");
             }else{
                 try{
-                    int diaint = Integer.parseInt(dia);     //las paso a numero entero, si lo que hay en esa posicion no son numeros salta error, el try catch controla ese error
+                    diaint = Integer.parseInt(dia);
+                    mesint = Integer.parseInt(mes);
+                    anyoint = Integer.parseInt(anyo);       //las paso a numero entero, si lo que hay en esa posicion no son numeros salta error, el try catch controla ese error
                 }catch (Exception e){                       //el try catch controla el fallo de java y lo atrapa para poder poner un mensaje en vez de el fallo con letras rojas
                     System.out.println("letras en el dia");
                 }
+                System.out.println(diaint);
+                if (diaint <= 0 || diaint > 31){
 
-                try{
-                    int mesint = Integer.parseInt(mes);
-                }catch (Exception e){
-                    System.out.println("letras en el mes");
                 }
 
-                try{
-                    int anyoint = Integer.parseInt(anyo);
-                }catch (Exception e){
-                    System.out.println("letras en el año");
-                }
+
 
 
 
