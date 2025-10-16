@@ -11,6 +11,7 @@ public class Practica1 {
 
         //Tras guardar lo introducido en teclado como un String, lo medimos para controlar que el formato de la fecha introducida sea correcto
         //Si lo introducido por teclado tiene una longitud distinta a 10 es porque está mal.
+
         int longitud = fechanacimiento.length();
         if (longitud != 10){
             System.out.println("La fecha introducida tiene que tener 10 carácteres contando las barras");
@@ -23,7 +24,7 @@ public class Practica1 {
             String barra1 = fechanacimiento.substring(2,3);
             String barra2 = fechanacimiento.substring(5,6);
 
-            boolean barratest1 = barra1.equals("/"); //¿en el espacio de barra1 hay /?
+            boolean barratest1 = barra1.equals("/"); //¿en el espacio de barra1 hay /? true si que la hay, false no la hay
             boolean barratest2 = barra2.equals("/");
             int diaint = 0;
             int mesint = 0;     //inicializar las varables para poder usarlas fuera del trycatch
@@ -42,6 +43,8 @@ public class Practica1 {
                     anyoint = Integer.parseInt(anyo);
                 }catch (Exception e){
                     System.out.println("Formato dd/mm/aaaa introducido incorrecto");
+                    return;
+                    //para acabar el programa aqui en vez de continuar con el siguiente paso se pone un return
                 }
 
                     //Si el try catch no salta es porque, efectivamente, hay numeros enteros en esos huecos
