@@ -12,7 +12,7 @@ public class Actividad_hasNexInt {
         final int ANYO_MINIMO = 1900;
         int modo = 0;
 
-        LocalDateTime fecha = LocalDateTime.now();
+        LocalDateTime fecha = LocalDateTime.now(); //Sacar el año actual
         int anyo_actual = fecha.getYear();
 
         int anyo_nacimiento_int = 0;
