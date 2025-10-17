@@ -1,6 +1,6 @@
 package org.example;
 
-public class Apuntes_String {
+public class Aapuntes_String {
     static void main() {
 
         String frase = "Al palo JuanFran del Atleti palo";
