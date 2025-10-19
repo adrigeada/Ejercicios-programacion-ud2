@@ -63,7 +63,8 @@ public class Generaciones_switchcase {
 
             default:
                 System.out.println("Tines que escribir 1 o 2");
-                break;
+
+                return;
         }
 
         if (nacimiento_int >= ANYO_MINIMO && nacimiento_int <= anyo_actual){
