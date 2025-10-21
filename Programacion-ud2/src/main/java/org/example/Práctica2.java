@@ -33,7 +33,7 @@ public class Práctica2 {
         String operador_min = operador.toLowerCase();
         boolean raiz = operador_min.equals("r");
 
-        if (!raiz) {
+        if (!raiz) { //si es una r se pide y se lee el segundo número
             System.out.println("Introduce el segundo número");
             try {
                 num2 = teclado.nextDouble();
@@ -41,6 +41,7 @@ public class Práctica2 {
                 System.out.println("El formato tiene que ser numérico");
             }
         }
+        //si no es una r se sale del if y sigue el programa
 
         switch (operador_min){
             case "+":
