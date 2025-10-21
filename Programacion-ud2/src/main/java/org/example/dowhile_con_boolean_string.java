@@ -23,7 +23,7 @@ public class dowhile_con_boolean_string {
             }
 
         }while (control == true);
-        String dia = fechanacimiento.substring(0,2);
+        System.out.println("fuera");
 
 
 
