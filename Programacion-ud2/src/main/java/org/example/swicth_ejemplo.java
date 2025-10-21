@@ -17,7 +17,7 @@ public class swicth_ejemplo {
                 System.out.println("No se el nombre");
                 break;
 
-        }
+        }//para char es con comillas simples case 'A'
 
         switch (numero){
             case 1:
