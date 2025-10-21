@@ -1,10 +1,9 @@
 package org.example;
 
 import java.time.LocalDateTime;
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class Actividad_hasNexInt {
+public class Generaciones_hasnextnt {
     static void main() {
         Scanner teclado = new Scanner(System.in);
         
@@ -27,7 +26,7 @@ public class Actividad_hasNexInt {
             
         }else {     //sino, salta el else
             System.out.println("No has introducido un valor permitido (1 o 2)");
-            seguir = false; 
+            seguir = false; // se puede sustituir esto por un return
         }
         
         if (seguir){ //if seguir = true
@@ -73,7 +72,7 @@ public class Actividad_hasNexInt {
 
 
 
-            if (anyo_nacimiento_int >= ANYO_MINIMO && anyo_nacimiento_int <= anyo_actual);{
+            if (anyo_nacimiento_int >= ANYO_MINIMO && anyo_nacimiento_int <= anyo_actual){
 
                 if (anyo_nacimiento_int <= 1927){
                     System.out.println("Generación sin bautizar");
