@@ -29,7 +29,7 @@ public class swicth_ejemplo {
             default:
                 System.out.println("no es ni 1 ni 2");
                 break;
-                
+
         }
 
 
