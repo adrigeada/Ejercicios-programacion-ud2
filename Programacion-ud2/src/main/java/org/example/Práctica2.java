@@ -30,7 +30,7 @@ public class Práctica2 {
         System.out.println("-----------------");
         System.out.println("Elige una operación");
 
-        //Leemos el operador y lo pasamos a minúsculas
+        //Leemos el operador y lo pasamos a minúsculas para evitar problemas con la R y la X
         String operador = teclado.next();
         String operador_min = operador.toLowerCase();
         //Creamos un booleano que diga true si el operador es r o R, false otra cosa
