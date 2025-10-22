@@ -48,7 +48,7 @@ public class Práctica2 {
         }
         //si es una r se sale del if y no pide el segundo número. Continua el programa.
 
-        //Usamos operador_min porque está pasado a minúsculas y no importará si la x y la r están en mayúsuclas
+        //Usamos operador_min porque está pasado a minúsculas y no importará si la x y la r están en mayúsculas
         switch (operador_min){
             case "+":
                 resultado = num1+num2;
