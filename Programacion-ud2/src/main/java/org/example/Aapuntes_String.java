@@ -7,6 +7,7 @@ public class Aapuntes_String {
         int numero = 456;
 
         String numero_string = Integer.toString(numero); //pasar un numero entero a String
+        int numerofrase = Integer.parseInt(frase); //pasar string a int. Si no hay un numero en el string salta error
 
         int tamanyo = frase.length();       //para saber el tamaño de un string. tamanyo es la lenght de frase
         System.out.println(tamanyo);        //te dice cuantos caracteres tiene frase
