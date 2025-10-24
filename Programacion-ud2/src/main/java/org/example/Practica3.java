@@ -37,12 +37,15 @@ public class Practica3 {
 
         int numint=0;
         int resultado = 0;
+        int resultadofinal=0;
         for (int i = 0,x=longitud; i<=9 ; i++,x--){
             num = isbn.charAt(i);
             numint = Integer.parseInt(String.valueOf(num));
             resultado = numint*x;
             System.out.println(num);
             System.out.println(resultado);
+            resultadofinal += resultado;
+            System.out.println(resultadofinal);
         }
 
 
