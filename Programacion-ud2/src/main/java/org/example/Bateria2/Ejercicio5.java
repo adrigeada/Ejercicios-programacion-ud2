@@ -9,8 +9,8 @@ public class Ejercicio5 {
         System.out.println("Escribe numero");
         int num = teclado.nextInt();
 
-        for (int i = num, contador = 0 ; i < i*10; contador++ ){
-            System.out.println(i*contador);
+        for (int i = 0; i<=10; i++){
+            System.out.println(i*num);
 
 
         }
