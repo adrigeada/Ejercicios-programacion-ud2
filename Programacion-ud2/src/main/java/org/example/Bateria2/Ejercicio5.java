@@ -7,19 +7,17 @@ public class Ejercicio5 {
         Scanner teclado = new Scanner(System.in);
 
         System.out.println("Escribe numero");
-        int num = teclado.nextInt();
+        int cantidad = teclado.nextInt();
+        int resultado = 0;
 
 
-        for (int i = num, contador = 0, resultado = i*contador; resultado < i*10; contador++ ){
-            System.out.println(i*contador);
+        for (int i =1; i<=cantidad; i++ ){
 
-        for (int i = 0; i<=10; i++){
-            System.out.println(i*num);
-
-
-
+            System.out.println("Inserta numero "+i);
+            int num = teclado.nextInt();
+            resultado +=num;
         }
-
+        System.out.println(resultado);
 
     }
 }
