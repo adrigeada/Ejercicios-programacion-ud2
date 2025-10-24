@@ -11,7 +11,7 @@ public class Ejercicio6_2 {
         int resultado= 1;
 
 
-        for (int i = 2; i<=factorial; i++){
+        for (int i = 1; i<=factorial; i++){
 
         resultado = resultado*i;
 
