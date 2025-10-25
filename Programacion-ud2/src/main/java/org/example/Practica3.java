@@ -10,7 +10,9 @@ public class Practica3 {
         String isbn = "a";
         int longitud = 0;
         char num = 'f';
-
+        int numint=0;
+        int multiplicaciones = 0;
+        int resultadofinal=0;
 
         System.out.println("Introduce ISBN");
 
@@ -24,30 +26,20 @@ public class Practica3 {
 
 //        boolean contiene = isbn.contains("?");
 
-//        String uno = isbn.substring(0,1);
-//        String dos = isbn.substring(1,2);
-//        String tres = isbn.substring(2,3);
-//        String cuatro = isbn.substring(3,4);
-//        String cinco = isbn.substring(4,5);
-//        String seis = isbn.substring(5,6);
-//        String siete = isbn.substring(6,7);
-//        String ocho = isbn.substring(7,8);
-//        String nueve = isbn.substring(8,9);
-//        String diez = isbn.substring(9);
-
-        int numint=0;
-        int resultado = 0;
-        int resultadofinal=0;
-        for (int i = 0,x=longitud; i<=9 ; i++,x--){
-            num = isbn.charAt(i);
-            numint = Integer.parseInt(String.valueOf(num));
-            resultado = numint*x;
-            System.out.println(num);
-            System.out.println(resultado);
-            resultadofinal += resultado;
-            System.out.println(resultadofinal);
+        for (int i = 0,x=longitud; i<=9 ; i++,x--){ //Hola Patri, no se si se pueden meter 2 variables diferentes en el for porque no lo has explicado, pero es lo único que se me ha ocurrido y parece que funciona :/.No es chatgpt, se me ha ocurrido a mi
+            num = isbn.charAt(i); //coge el caracter en la posicion i, cada vuelta la i sube una posicion, empieza en 0
+            numint = Integer.parseInt(String.valueOf(num));//el caracter de la posicion i lo transforma a int para poder hacer operaciones con él
+            multiplicaciones = numint*x; //x es la longitud del isbn (10), el numero sacado antes se multiplica por x en la primera vuelta, cada vuelta se resta 1.
+//            System.out.println(num);
+//            System.out.println(resultado);
+            resultadofinal += multiplicaciones;//el resultado final es la suma de los resultados que dan las multiplicaciones
         }
-
+        System.out.println(resultadofinal);
+        if (resultadofinal%11 == 0){
+            System.out.println("El isbn es válido");
+        }else {
+            System.out.println("Es isbn no es valido");
+        }
 
 //0201103311 prueba con este numero
 
