@@ -2,7 +2,7 @@ package org.example;
 
 import java.util.Scanner;
 // 156881111X / 0201103311 ISBN válidos para probar
-public class Practica3_1 {
+public class Practica3 {
     static void main() {
         Scanner teclado = new Scanner(System.in);
 
@@ -103,13 +103,15 @@ public class Practica3_1 {
 
             //En el modo 1 probamos que si el resto de dividir el resultado final es 0, el isbn es válido, si es diferente a 0, el isbn no es valido
             case "1":
-
-//                System.out.println(resultadofinal);
-                if (resultadofinal%11 == 0){
+                if (isbninterrogacion){
+                    System.out.println("Si quieres reparar un ISBN, tienes que usar el modo [2] Reparación");
+                } else if (resultadofinal%11 == 0) {
                     System.out.println("El ISBN es válido");
                 }else {
                     System.out.println("Es ISBN no es valido");
                 }
+
+//              System.out.println(resultadofinal);
 
                 break;
 
