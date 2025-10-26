@@ -1,7 +1,7 @@
 package org.example;
 
 import java.util.Scanner;
-
+// 156881111X / 0201103311 ISBN válidos para probar
 public class Practica3_1 {
     static void main() {
         Scanner teclado = new Scanner(System.in);
@@ -47,7 +47,7 @@ public class Practica3_1 {
 
         //Controlamos que el isbn tenga una longitud de 10 caracteres. Si no, se sale del programa
         if (longitud != 10){
-            System.out.println("El isbn tienen que ser 10 caracteres");
+            System.out.println("El ISBN tienen que ser 10 caracteres");
             return;
         }
 
@@ -106,22 +106,31 @@ public class Practica3_1 {
 
 //                System.out.println(resultadofinal);
                 if (resultadofinal%11 == 0){
-                    System.out.println("El isbn es válido");
+                    System.out.println("El ISBN es válido");
                 }else {
-                    System.out.println("Es isbn no es valido");
+                    System.out.println("Es ISBN no es valido");
                 }
 
                 break;
 
                 //En el caso 2 hacemos un bucle para encontrar el numero por el que se tiene que multiplicar para que el resto de 0
             case "2":
+                if (!isbninterrogacion){
+                    System.out.println("Tienes que poner una interrogacion en el ISBN para repararlo");
+                }
 
-                for (r=0 ; r<=9 ; r++){ //probamos con numeros del 0 al 9
+                for (r=0 ; r<=10 ; r++){ //probamos con numeros del 0 al 10
 
                     //En este caso el resultado final es al que se le ha sustituido la ? por 0. Como hemos encontrado el hueco donde estaba la ? sabemos por que numero tenemos que multiplicar el numero r que estamos buscando
-                    if ((resultadofinal + multinterrgogacion*r)%11 == 0){  //Cuando el resto de esta operación de 0, salta el mensaje
-                        System.out.println("El dígito que falta es " +r);
+                    if ((resultadofinal + multinterrgogacion*r)%11 == 0){ //Cuando el resto de esta operación es 0, salta el mensaje
+                       if (r == 10){
+                           System.out.println("El dígito que te falta es: X");
+                       }else {
+                           System.out.println("El dígito que falta es: " +r);
+                       }
+
                     }
+
 //                    System.out.println(r);
                 }
 
