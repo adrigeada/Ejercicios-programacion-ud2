@@ -1,4 +1,4 @@
-package org.example.Batería1;
+package org.example.Bateria1;
 
 public class Ejercicio3 {
     static void main() {

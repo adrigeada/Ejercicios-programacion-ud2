@@ -1,4 +1,4 @@
-package org.example.Batería1;
+package org.example.Bateria1;
 
 import java.util.Scanner;
 
