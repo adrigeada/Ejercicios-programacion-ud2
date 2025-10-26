@@ -15,14 +15,13 @@ public class Practica3 {
         int numint=0;
         int multiplicaciones = 0;
         int resultado=0;
+        int resultadofinal = 0;
 
         String digitofinal= "i";
         boolean controlx = true;
-        int resultadofinal = 0;
         int digitofinal_int= 0;
 
         int r = 0;
-
 
 
         System.out.println("Elige que quieres hacer:");
@@ -36,7 +35,7 @@ public class Practica3 {
         switch (modo.toLowerCase()){
 
             case "1":
-                //Esta parte la queria poner fuera del switch case porque isbn y longitud se usan en los dos casos, pero al ponerla fuera el case X no me funcionaba correctamente
+                //Esta parte la queria poner fuera del switch case porque isbn y longitud se usan en los dos casos, pero al ponerla fuera, el case X no me funcionaba correctamente
                 System.out.println("Introduce ISBN");
 
                 isbn = teclado.nextLine();
@@ -148,7 +147,7 @@ public class Practica3 {
                     }
                     System.out.println(r);
                 }
-                
+
                 break;
 
             case "x":
