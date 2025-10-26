@@ -60,8 +60,10 @@ public class Practica3_1 {
             multinterrgogacion = 10 - posicion_interrogacion; //con esto calculo por que número hay que multiplicar al numero que estaría en la posicion de la interrogacion. Lo usaremos mas tarde para encontrar el numero por el que se intercambia la ?
             //Voy a reemplazar la interrogacion por 0. Esto me dará el resultado de sumar todas las multiplicaciones menos la del hueco de la interrogacion.
             isbnarreglo = isbn.replace("?", "0");
-            isbn = isbnarreglo;
+
+            isbn = isbnarreglo; //a partir de ahora isbnarreglo es isbn, y lo podemos usar en el for.
         }
+
 
         for (int i = 0,x=longitud; i<=8 ; i++,x--){ //Hola Patri, no se si se pueden meter 2 variables diferentes en el for porque no lo has explicado, pero es lo único que se me ha ocurrido y parece que funciona :/.No es chatgpt, se me ha ocurrido a mi
 
@@ -78,16 +80,16 @@ public class Practica3_1 {
             resultado += multiplicaciones; //el resultado es la suma de los resultados que dan las multiplicaciones
         }
 
-        //Voy a controlar que el ultimo dígito del isbn puede ser una X. Entonces la x se sustituiría por 10. Se podría hacer con un replace de x por 10 y luego pasarlo a int, pero como el ultimo digito se multiplica por 1, solo lo sumo al resultado anterior.
+        //Voy a controlar que el ultimo dígito del isbn puede ser una X. Entonces la x se sustituiría por 10. Se podría hacer con un replace de x por 10 y luego pasarlo a int, pero como el ultimo digito siempre se multiplica por 1, simplemente lo sumo al resultado anterior.
 
         digitofinal = isbn.toLowerCase().substring(9); //Cojo la ultima posicion del isbn y la paso a minusculas para no diferenciar x de X
         controlx = digitofinal.equals("x");                     //Hago un control con equals para ver si hay una x
 
 
-        if (controlx){                                                  //Si el ultimo digito es una x, el resultado anterior se suma a 10, porque sería 10*1
+        if (controlx){                                          //Si el ultimo digito es una x, el resultado anterior se suma a 10, porque sería 10*1
             resultadofinal = resultado + 10;
         }else {
-            try {                                                       //Si no es una x, se pasa a int y se suma al resultado anterior.
+            try {                                                //Si no es una x, se pasa a int y se suma al resultado anterior.
                 digitofinal_int = Integer.parseInt(digitofinal);
             }catch (Exception e){
                 System.out.println("En el ultimo digito solo puede haber un número o una X");
