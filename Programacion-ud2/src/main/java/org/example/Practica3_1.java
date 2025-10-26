@@ -55,7 +55,7 @@ public class Practica3_1 {
         boolean isbninterrogacion = isbn.contains("?");
         if (isbninterrogacion){
 
-            int posicion_interrogacion= isbn.indexOf("?");
+            int posicion_interrogacion= isbn.indexOf("?"); //Miramos en que posición está la ? para saber por que número se multiplicaría.
 
             multinterrgogacion = 10 - posicion_interrogacion; //con esto calculo por que número hay que multiplicar al numero que estaría en la posicion de la interrogacion. Lo usaremos mas tarde para encontrar el numero por el que se intercambia la ?
             //Voy a reemplazar la interrogacion por 0. Esto me dará el resultado de sumar todas las multiplicaciones menos la del hueco de la interrogacion.
@@ -104,7 +104,7 @@ public class Practica3_1 {
             //En el modo 1 probamos que si el resto de dividir el resultado final es 0, el isbn es válido, si es diferente a 0, el isbn no es valido
             case "1":
 
-                System.out.println(resultadofinal);
+//                System.out.println(resultadofinal);
                 if (resultadofinal%11 == 0){
                     System.out.println("El isbn es válido");
                 }else {
@@ -122,7 +122,7 @@ public class Practica3_1 {
                     if ((resultadofinal + multinterrgogacion*r)%11 == 0){  //Cuando el resto de esta operación de 0, salta el mensaje
                         System.out.println("El dígito que falta es " +r);
                     }
-                    System.out.println(r);
+//                    System.out.println(r);
                 }
 
                 break;
