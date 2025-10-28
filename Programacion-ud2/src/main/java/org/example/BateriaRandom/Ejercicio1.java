@@ -11,6 +11,7 @@ public class Ejercicio1 {
 
         System.out.println("Dado 1: "+dado1);
         System.out.println("Dado 2: " +dado2);
-        System.out.println("La suma de los dados es: "+dado1+dado2);
+        int resultado = dado1+dado2;
+        System.out.println("La suma de los dados es: "+resultado);
     }
 }
