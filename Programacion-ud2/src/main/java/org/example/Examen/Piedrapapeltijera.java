@@ -1,4 +1,4 @@
-package org.example;
+package org.example.Examen;
 
 import java.util.Random;
 import java.util.Scanner;
@@ -19,7 +19,8 @@ public class Piedrapapeltijera {
             System.out.println(eleccion);
 
             System.out.println("Piedra, papel o tijera");
-            char mieleccion = teclado.next().charAt(0);  System.out.println(mieleccion);
+            char mieleccion = teclado.next().charAt(0);
+            System.out.println(mieleccion);
 
 
             if (eleccion == mieleccion){
@@ -62,6 +63,7 @@ public class Piedrapapeltijera {
                 default:
                     System.out.println("No has elegido bien");
                     break;
+
             }
 
             System.out.println(resultadoyo+"-"+resultadopc);
