@@ -1,4 +1,4 @@
-package org.example.Bateria3;
+package org.example.BateriaPreExamen;
 
 public class Ejercicio3 {
     static void main() {

@@ -1,4 +1,4 @@
-package org.example.Bateria3;
+package org.example.BateriaPreExamen;
 
 import java.util.Scanner;
 
