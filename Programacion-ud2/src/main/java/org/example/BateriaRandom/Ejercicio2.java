@@ -8,7 +8,7 @@ public class Ejercicio2 {
 
 
         String caracteres = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-        String contrasenya = "a";
+        String contrasenya = "";
 
         for (int i =0; i<12 ; i++){
 
