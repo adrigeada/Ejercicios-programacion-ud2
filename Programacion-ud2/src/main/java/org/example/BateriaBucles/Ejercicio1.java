@@ -1,4 +1,4 @@
-package org.example.Bateria2;
+package org.example.BateriaBucles;
 
 import java.util.Scanner;
 
