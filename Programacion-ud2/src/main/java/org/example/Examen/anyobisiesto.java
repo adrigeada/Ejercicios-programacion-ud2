@@ -28,7 +28,7 @@ public class anyobisiesto {
             }else {
 //                System.out.println("No bisiesto");
             }
-            anyo++;
+            anyo++; //esto es para controlar que no se calcule el mismo año siempre, y el i++ es para controlar cuantas veces se hace el bucle
 //            System.out.println(anyo);
 //            System.out.println(contador);
         }
