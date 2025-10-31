@@ -12,7 +12,7 @@ public class Ejercicio4 {
         String contrasenya3 = "";
         String contrasenyafinal = "";
 
-        int cantidad = aleatorio.nextInt(5)+8;
+        int cantidad = aleatorio.nextInt(5)+8; //5 numeros empezando por el 8
         System.out.println(cantidad);
 
         String mayusculas = caracteres.substring(0,25);
